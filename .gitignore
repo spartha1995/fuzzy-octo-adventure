@@ -263,3 +263,11 @@ __pycache__/
 *.js
 *.js.map
 */*.js.map
+
+#angular build 
+**/dist
+**/tmp
+**/out-tsc
+
+# dependencies
+node_modules/

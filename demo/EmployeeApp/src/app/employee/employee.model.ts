@@ -1,8 +1,8 @@
 export class Employee{
     constructor(
-        public Id: number,
-        public FirstName: string,
-        public LastName: string,
-        public Email:string
+        public id: number,
+        public firstname: string,
+        public lastname: string,
+        public email:string
     ) {}
 }

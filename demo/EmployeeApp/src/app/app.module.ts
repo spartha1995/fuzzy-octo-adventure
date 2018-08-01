@@ -5,7 +5,8 @@ import { RouterModule,Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './http.service';
 
 const routes: Routes = [
   { path: 'list', component: EmployeeListComponent},
@@ -16,14 +17,16 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    EmployeeAddComponent,
-    HttpClientModule
+    EmployeeAddComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    HttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,12 +20,12 @@ app.engine('html', require('ejs').renderFile);
 
 
 app.get('/', function (request, response) {
-    response.send("<b>Hello World !!</b>");
-});
-
-app.get('/dashboard', function (request, response) {
     response.render('index.html');
 });
+
+// app.get('/dashboard', function (request, response) {
+//     response.render('index.html');
+// });
 
 
 app.get('/api/Fetchemployee', function (request, response) {
