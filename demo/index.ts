@@ -5,9 +5,18 @@ import * as EmployeeController from './Controllers/employee-controller';
 import {EmployeeAC} from './Model/employee-model';
 
 var app = express();
+var path = require('path');
 app.use(express.json());
 var port = 8085;
+
+//create table
 migrateDB.MigratedDatabase();
+app.use(express.static(path.join(__dirname, 'EmployeeApp')));
+// set the view engine to ejs
+app.set('views', __dirname + '/Views');
+app.use(express.static(__dirname + '/EmployeeApp'));
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 
 
 app.get('/', function (request, response) {
@@ -15,7 +24,7 @@ app.get('/', function (request, response) {
 });
 
 app.get('/dashboard', function (request, response) {
-    response.send("<b>dashboard Page!!</b>")
+    response.render('index.html');
 });
 
 
