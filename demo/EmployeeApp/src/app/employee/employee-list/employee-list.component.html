@@ -1,0 +1,25 @@
+<br>
+<br>
+<div class= "container">
+    <h3 *ngIf="employeeList.length == 0 ">No Employees Found</h3>
+    <table *ngIf="employeeList.length > 0" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Update Button</th>
+        <th>Delete Button</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeList">
+            <td>{{employee.FirstName}}</td>
+            <td>{{employee.LastName}}</td>
+            <td>{{employee.Email}}</td>
+            <td><button type="button" class="btn btn-warning">Update</button></td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
