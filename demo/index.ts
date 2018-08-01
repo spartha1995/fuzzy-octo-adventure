@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'EmployeeApp')));
 // set the view engine to ejs
 app.set('views', __dirname + '/Views');
 app.use(express.static(__dirname + '/EmployeeApp'));
+app.use(express.static(__dirname + '/EmployeeApp/dist/EmployeeApp'));
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 

@@ -7,6 +7,7 @@ import { EmployeeListComponent } from './employee/employee-list/employee-list.co
 import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './http.service';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'list', component: EmployeeListComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
