@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "ng": "ng",
+    "build":"cd ./EmployeeApp && ng build && cd.. && tsc index.ts && node index.js"
   },
   "keywords": [],
   "author": "",
