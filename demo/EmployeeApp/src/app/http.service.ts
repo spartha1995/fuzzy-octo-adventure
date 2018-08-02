@@ -15,4 +15,19 @@ export class HttpService {
     {
         return this.http.post('/api/employee',employee);
     }
+
+    getEmployeeById(id:number)
+    {
+        return this.http.get('/api/employee/'+id);
+    }
+
+    updateEmployee(employee:Employee)
+    {
+        return this.http.put('api/employee',employee);
+    }
+
+    deleteEmployee(id:number)
+    {
+        return this.http.get('/api/employee/'+id+'/delete');
+    }
 }

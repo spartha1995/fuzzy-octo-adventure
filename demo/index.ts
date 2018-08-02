@@ -49,4 +49,15 @@ app.put('/api/employee', function (request, response) {
     EmployeeController.UpdateEmployee(response, department);
 });
 
+app.get('/api/employee/:id/delete', function (request, response) {
+    let id = +request.params.id;
+    EmployeeController.RemoveEmployee(response , id);
+});
+
+//api/employee/1/delete
+// app.get('/api/employee/:id/delete', function (request, response) {
+//     let id = +request.params.id;
+//     EmployeeController.RemoveEmployee(response, id);
+// });
+
 app.listen(port);
